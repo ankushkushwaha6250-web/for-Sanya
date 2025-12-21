@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Sanya 🐱💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Fredoka',cursive;
+}
+
+body{
+  background:linear-gradient(135deg,#ffd6e8,#fff3c4,#d7f9ff);
+  overflow-x:hidden;
+}
+
+section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:30px;
+}
+
+h1{
+  font-size:3rem;
+  color:#ff4d88;
+  animation:bounce 2s infinite;
+}
+
+p{
+  font-size:1.4rem;
+  color:#444;
+  max-width:700px;
+}
+
+.big{
+  font-size:4.5rem;
+  animation:wiggle 1.5s infinite;
+}
+
+button{
+  margin-top:25px;
+  padding:15px 30px;
+  font-size:1.2rem;
+  background:#ff90bc;
+  border:none;
+  border-radius:30px;
+  color:white;
+  cursor:pointer;
+  animation:pulse 2s infinite;
+}
+
+/* animations */
+@keyframes bounce{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+@keyframes wiggle{
+  0%{transform:rotate(0deg);}
+  25%{transform:rotate(5deg);}
+  50%{transform:rotate(-5deg);}
+  75%{transform:rotate(5deg);}
+  100%{transform:rotate(0deg);}
+}
+@keyframes pulse{
+  0%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+/* floating stickers */
+.sticker{
+  position:fixed;
+  bottom:-20px;
+  font-size:30px;
+  animation:floatUp 8s linear infinite;
+}
+@keyframes floatUp{
+  0%{transform:translateY(0);opacity:1;}
+  100%{transform:translateY(-120vh);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<section>
+  <div class="big">😺</div>
+  <h1>Hiiii Sanyaaaa</h1>
+  <p>This is for YOUUU 💖</p>
+</section>
+
+<section>
+  <div class="big">🐱💗</div>
+  <h1>You are special</h1>
+  <p>Like… SUPER DUPER SPECIAL 😤💞</p>
+</section>
+
+<section>
+  <div class="big">😸✨</div>
+  <h1>Meow fact</h1>
+  <p>Every time you smile, a cat somewhere goes “meow” 🐾</p>
+</section>
+
+<section>
+  <div class="big">🥹🐾</div>
+  <h1>Why I like you</h1>
+  <p>You’re kind. You’re funny.  
+  And you make everything feel lighter 💕</p>
+</section>
+
+<section>
+  <div class="big">🐱🎀</div>
+  <h1>Our vibes</h1>
+  <p>Chaotic. Cute. Forever 😼💖</p>
+</section>
+
+<section>
+  <div class="big">😻</div>
+  <h1>WARNING</h1>
+  <p>You are TOO ADORABLE to exist 😡💗</p>
+</section>
+
+<section>
+  <div class="big">🐾💌</div>
+  <h1>Small letter</h1>
+  <p>
+    Dear Sanya,  
+    I made this because words weren’t enough.  
+    You matter. Always. 💖
+  </p>
+</section>
+
+<section>
+  <div class="big">🎁🐱</div>
+  <h1>Click for surprise</h1>
+  <button onclick="surprise()">MEOW MEOW</button>
+</section>
+
+<section>
+  <div class="big">😽💞</div>
+  <h1>You’re loved</h1>
+  <p>More than you know 💗</p>
+</section>
+
+<section>
+  <div class="big">🐱🌈</div>
+  <h1>Forever page</h1>
+  <p>This friendship has no logout 😤💖</p>
+</section>
+
+<section>
+  <div class="big">💖🐾</div>
+  <h1>BYEEEE</h1>
+  <p>But not really 😼</p>
+</section>
+
+<script>
+function surprise(){
+  alert("MEOW 😺💖 You are one of the best things in my life, Sanya!");
+}
+
+/* floating stickers generator */
+setInterval(()=>{
+  const s=document.createElement("div");
+  s.className="sticker";
+  s.innerHTML=["😺","🐱","💖","✨","🎀","🐾","😻"][Math.floor(Math.random()*7)];
+  s.style.left=Math.random()*100+"vw";
+  document.body.appendChild(s);
+  setTimeout(()=>s.remove(),8000);
+},250);
+</script>
+
+</body>
+</html>
